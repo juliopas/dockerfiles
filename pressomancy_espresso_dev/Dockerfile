@@ -41,8 +41,8 @@ RUN pip install --no-cache-dir \
     "Cython>=0.29.28,<3.0.12" \
     tqdm
 
-# Clone the custom Espresso repository
-RUN git clone --branch dds_gpu_replica_field_tracking https://github.com/stekajack/espresso_patched.git espresso
+# Clone the Espresso repository
+RUN git clone https://github.com/espressomd/espresso.git espresso
 COPY configs/myconfig.hpp /home/julio/espresso/build/myconfig.hpp
 COPY patches/small_tweak.patch /home/julio/patches/small_tweak.patch
 
@@ -50,7 +50,7 @@ COPY patches/small_tweak.patch /home/julio/patches/small_tweak.patch
 WORKDIR /home/julio/espresso
 RUN git apply /home/julio/patches/small_tweak.patch
 
-RUN cd build && \
+RUN mkdir -p build && cd build && \
     cmake -DESPRESSO_BUILD_WITH_CUDA=ON .. && \
     make -j$(nproc)
 
