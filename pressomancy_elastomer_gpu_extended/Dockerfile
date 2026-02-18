@@ -14,6 +14,8 @@ RUN apt-get update && \
     python3-pip \
     openmpi-bin \
     libboost-all-dev \
+    libfftw3-dev \
+    libfftw3-mpi-dev \
     nvidia-cuda-toolkit \
     git
 
