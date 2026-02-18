@@ -22,9 +22,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: pressomancy-julio-gpu
-            dockerfile: pressomancy_espresso_dev/Dockerfile
-            context: pressomancy_espresso_dev
+          - name: pressomancy_elastomer_gpu
+            dockerfile: pressomancy_elastomer_gpu/Dockerfile
+            context: pressomancy_elastomer_gpu
 
     permissions:
       contents: read
