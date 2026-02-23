@@ -32,6 +32,7 @@
 #define ROTATIONAL_INERTIA
 #define MASS
 #define EXTERNAL_FORCES
+#define BOND_CONSTRAINT
 
 // Charges and dipoles
 #define DIPOLES
