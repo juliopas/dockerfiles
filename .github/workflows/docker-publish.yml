@@ -2,14 +2,6 @@ name: Build and Push Multiple Docker Images
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '32 13 * * *'
-  push:
-    branches: [ "main" ]
-    # You can remove tags from triggers or keep if you want
-    # tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "main" ]
 
 env:
   REGISTRY: ghcr.io
