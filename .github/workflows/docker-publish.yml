@@ -14,9 +14,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - name: pressomancy_elastomer_espresso_magnetize
-            dockerfile: pressomancy_elastomer_espresso_magnetize/Dockerfile
-            context: pressomancy_elastomer_espresso_magnetize
+          - name: pressomancy_dev_julio
+            dockerfile: pressomancy_dev_julio/Dockerfile
+            context: pressomancy_dev_julio
 
     permissions:
       contents: read
