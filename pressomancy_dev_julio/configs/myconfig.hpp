@@ -37,7 +37,7 @@
 // Charges and dipoles
 #define DIPOLES
 #define DIPOLE_FIELD_TRACKING
-#define MAGNETIZE
+#define LANGEVIN_MAGNETIZATION
 
 // Long-range interactions
 #define WCA
